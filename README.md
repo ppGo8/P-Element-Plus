@@ -5,5 +5,5 @@
     <img src="https://img.shields.io/static/v1?label=TypeScript&message=4&color=green"/> 
 </a>
 <a href="https://github.com/ElemeFE/element">
-    <img src="https://img.shields.io/static/v1?label=Postcss&message=4&color=green"/> 
+    <img src="https://img.shields.io/static/v1?label=Postcss&message=&color=green"/> 
 </a>
