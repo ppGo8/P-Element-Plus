@@ -332,13 +332,18 @@ console.log(calcArray('d')) // ["d", "d", "d"]
 
 ## 声明文件
 
-有很多库都是基于`JS`的，如果想要使用`JS`的库该怎么做？
+- 问题：有很多库都是基于`JS`的，如果想在`ts`中使用`JS`的库该怎么做？
 
+- 解决方法：使用**声明文件**，文件名要求`xxx.d.ts`
 
+  `xxx.d.ts`文件中只有类型声明，没有实际的实现代码。
 
-写一个声明文件
+  ```ts
+  // 以axios为例
+  declare function axios(uerl:string):string
+  ```
 
-.d.ts文件中只有类型声明，没有实际的声明代码
+  
 
 
 
