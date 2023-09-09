@@ -345,10 +345,6 @@ console.log(calcArray('d')) // ["d", "d", "d"]
 
   
 
-
-
-
-
 本篇文章参考
 
 [一篇浅显易懂的 TS 入门指南](https://mp.weixin.qq.com/s/KR1Q8Skf-aU1WIIbcsawuw)

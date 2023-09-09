@@ -1,19 +1,19 @@
+/* eslint-env node */
+require('@rushstack/eslint-patch/modern-module-resolution')
+
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "node": true
-    },
-    "overrides": [
-    ],
-    // 针对Vue和ts文件的规则
-    "extends": ["plugin:vue/vue3-essential", '@vue/eslint-config-typescript'],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "parser": '@typescript-eslint/parser',
-        "sourceType": "module"
-    },
-    "rules": {
-        "Semi": 0,
-    }
+  root: true,
+  'extends': [
+    'plugin:vue/vue3-essential',
+    'eslint:recommended',
+    '@vue/eslint-config-typescript',
+    '@vue/eslint-config-prettier/skip-formatting'
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest'
+  },
+  rules: {
+    //关闭组件命名规则,不可以关闭 要使用两个单词,避免重复
+    // "vue/multi-word-component-names": "off",
+  }
 }
