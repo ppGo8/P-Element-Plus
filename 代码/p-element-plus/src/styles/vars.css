@@ -5,7 +5,24 @@
   /* colors */
   --pp-color-white: #ffffff;
   --pp-color-black: #000000;
-  --pp-color-primary: #409eff;
+
+  --colors: (
+    primary: #409eff,
+    success: #67c23a,
+    warning: #e6a23c,
+    danger: #f56c6c,
+    info: #909399
+  );
+   @each $val, $color in var(--colors) {
+    --pp-color-$(val): $(color);
+    @for $i from 3 to 9 by 2 {
+      --pp-color-$(val)-light-$(i): mix(#fff, $(color), .$(i))
+    }
+    --pp-color-$(val)-light-8: mix(#fff, $(color), .8);
+    --pp-color-$(val)-dark-2: mix(#000, $(color), .2);
+  }
+  /* 以下颜色代码使用上述postcss-each和postcss-for动态生成 */
+  /* --pp-color-primary: #409eff;
   --pp-color-primary-light-3: #79bbff;
   --pp-color-primary-light-5: #a0cfff;
   --pp-color-primary-light-7: #c6e2ff;
@@ -39,7 +56,7 @@
   --pp-color-info-light-7: #dedfe0;
   --pp-color-info-light-8: #e9e9eb;
   --pp-color-info-light-9: #f4f4f5;
-  --pp-color-info-dark-2: #73767a;
+  --pp-color-info-dark-2: #73767a; */
   
   --pp-bg-color: #ffffff;
   --pp-bg-color-page: #f2f3f5;

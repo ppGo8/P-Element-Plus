@@ -4,8 +4,8 @@
       class="pp-button" 
       :class="{
       //  变化属性名,使用中括号+模板字符串解决
-        [`pp-button-${type}`]:type,
-        [`pp-button-${size}`]:size,
+        [`pp-button--${type}`]: type,
+        [`pp-button--${size}`]: size,
         'is-plain': plain,
         'is-round': round,
         'is-circle': circle,
@@ -30,8 +30,4 @@ defineProps<ButtonProps>()  // 引入后,即可在模板或vue实例中使用泛
 </script>
 
 <style>
-.pp-button {
-  /* 使用全局定义的色彩系统,在main.js中引入 */
-  background-color: var(--main-bg-color);
-}
 </style>
