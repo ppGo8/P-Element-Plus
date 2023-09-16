@@ -1,4 +1,4 @@
-import './assets/main.css'
+// 引入自己定义的样式
 import './styles/index.css'
 
 import { createApp } from 'vue'

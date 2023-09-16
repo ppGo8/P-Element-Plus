@@ -1,4 +1,3 @@
-:root {
-  
-  --main-bg-color: blue;
-}
+/* 这个代码会被postcss优化 */
+@import './vars.css' ;
+@import './reset.css' ;
