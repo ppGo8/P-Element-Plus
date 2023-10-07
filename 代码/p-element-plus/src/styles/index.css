@@ -2,3 +2,4 @@
 @import './vars.css' ;
 @import './reset.css' ;
 @import '../components/PpButton/style.css';
+@import '../components/PpCollapse/style.css';

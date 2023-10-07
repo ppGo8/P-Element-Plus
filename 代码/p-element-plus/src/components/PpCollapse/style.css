@@ -1,0 +1,55 @@
+.pp-collapse {
+  --pp-collapse-border-color: var(--pp-border-color-light);
+  --pp-collapse-header-height: 48px;
+  --pp-collapse-header-bg-color: var(--pp-fill-color-blank);
+  --pp-collapse-header-text-color: var(--pp-text-color-primary);
+  --pp-collapse-header-font-size: 13px;
+  --pp-collapse-content-bg-color: var(--pp-fill-color-blank);
+  --pp-collapse-content-font-size: 13px;
+  --pp-collapse-content-text-color: var(--pp-text-color-primary);
+  --pp-collapse-disabled-text-color: var(--pp-disabled-text-color);
+  --pp-collapse-disabled-border-color: var(--pp-border-color-lighter);
+  border-top: 1px solid var(--pp-collapse-border-color);
+  border-bottom: 1px solid var(--pp-collapse-border-color);
+}
+.pp-collapse-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--pp-collapse-header-height);
+  line-height: var(--pp-collapse-header-height);
+  background-color: var(--pp-collapse-header-bg-color);
+  color: var(--pp-collapse-header-text-color);
+  cursor: pointer;
+  font-size: var(--pp-collapse-header-font-size);
+  font-weight: 500;
+  transition: border-bottom-color var(--pp-transition-duration);
+  outline: none;
+  border-bottom: 1px solid var(--pp-collapse-border-color);
+  &.is-disabled {
+    color: var(--pp-collapse-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+  }
+  &.is-active {
+    border-bottom-color: transparent;
+  }
+}
+.pp-collapse-item__content {
+  will-change: height;
+  background-color: var(--pp-collapse-content-bg-color);
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: var(--pp-collapse-content-font-size);
+  color: var(--pp-collapse-content-text-color);
+  border-bottom: 1px solid var(--pp-collapse-border-color);
+  /* 有padding动画会卡顿,即padding会马上出现而height慢慢出现 
+     解决方法:把有padding的盒子放在一起一个父盒子中*/
+  padding-bottom: 25px; 
+}
+ 
+/* 只保留中间的状态,开始和结束的状态通过js去控制 */
+/* 为什么通过js去控制动画呢?因为item的高度是由内容撑开的,过渡只有属性为数值时才生效,所以使用js获取具体高度 */
+.slide-enter-active, .slide-leave-active {
+  transition: height 1s ease-in-out;
+}
