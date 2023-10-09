@@ -102,7 +102,11 @@
   }
   .pp-button--$(val).is-plain {
     --pp-button-text-color: var(--pp-color-$(val));
+<<<<<<< HEAD
     --pp-button-bg-color: var(--pp-color-$(val)-light-9);
+=======
+    --pp-button-bg-color: var(--pp-color-$(val)-light-9) ;
+>>>>>>> dev
     --pp-button-border-color: var(--pp-color-$(val)-light-5);
     --pp-button-hover-text-color: var(--pp-color-white);
     --pp-button-hover-bg-color: var(--pp-color-$(val));
