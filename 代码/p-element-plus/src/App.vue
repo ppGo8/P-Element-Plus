@@ -23,6 +23,7 @@
     <PpButton size="large">Test Button</PpButton>
     <PpButton size="small">Test Button</PpButton>
   </main> 
+  <br />
 
   <!-- 2.Collapse -->
   <main>
@@ -45,7 +46,7 @@
       </PpCollapseItem>
     </PpCollapse>
   </main>
-  这是已经打开的Item{{openedValue}}
+  <!-- 这是已经打开的Item{{openedValue}} -->
 
   <!-- <main>
     <PpCollapse v-model="openedAccordValue" accordion>
@@ -68,7 +69,12 @@
     </PpCollapse>
   </main>
   这是已经手风琴模式打开的Item{{openedAccordValue}} -->
-
+  <br />
+  <!-- 3.Icon -->
+  <main>
+    <PpIcon icon="fa-solid fa-user-secret" />
+    <PpIcon icon="arrow-up" size="2xl" spin />
+  </main>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
@@ -76,7 +82,7 @@ import { ref } from 'vue'
 import PpButton from './components/PpButton/PpButton.vue';
 import PpCollapse from './components/PpCollapse/PpCollapse.vue';
 import PpCollapseItem from './components/PpCollapse/PpCollapseItem.vue';
-
+import PpIcon from './components/PpIcon/PpIcon.vue';
 // collapse组件打开的Item
 const openedValue = ref(['a']) 
 // const openedAccordValue = ref(['a']) 
